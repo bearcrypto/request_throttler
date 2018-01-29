@@ -39,14 +39,10 @@ class IoSocketConnectionThrottler extends QueueListener{
           queueItemToProcess.socket.listen(
               queueItemToProcess.parseReceivedData,
               onDone: (){
-                print("Done called");
                 if(queueItemToProcess.recurring && queueItemToProcess.closeCode != 3005){
                   new Timer(const Duration(seconds: 1), (){
                     this.reQueueItem(queueItemToProcess);
                   });
-                } else {
-                  print("Queuer stopped so not requeing");
-
                 }
                 queueItemToProcess.closeCode = 0;
               },

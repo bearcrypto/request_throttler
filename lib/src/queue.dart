@@ -17,7 +17,6 @@ abstract class QueueListener {
     this.setupBeforeStart();
     this._isRunning = true;
     this.queueableItems.forEach((queueableItem) {
-      print("Adding queueable item to queue");
       queueableItem.stopwatch.start();
       this._queue.add(queueableItem);
     });
@@ -34,7 +33,6 @@ abstract class QueueListener {
       return !queueableItem.runOnRestart;
     });
     this.timeOfLastStop = new DateTime.now();
-    print("Fully stopped");
   }
 
   void addQueuableItem(QueueItem queueableItem){
