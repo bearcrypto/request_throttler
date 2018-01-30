@@ -34,12 +34,12 @@ class HttpRequestThrottler extends QueueListener{
       httpClient.close();
     });
     if(response != null){
-      this._reactToResponse(response);
+      this.reactToResponse(response);
     }
     return response;
   }
 
-  _reactToResponse(Http.Response response) async {
+  reactToResponse(Http.Response response) async {
     if(response?.statusCode != 200) {
       _badResponseStreak++;
       String errorMessage = '''Received status code: ${response.statusCode} with reason :
