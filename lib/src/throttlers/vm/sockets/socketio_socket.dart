@@ -85,6 +85,10 @@ abstract class SocketIoRequestItem extends WebSocketRequestItem {
   DateTime timeOfLastClose = new DateTime.now();
   DateTime timeOfLastPong = new DateTime.now();
   SocketIoRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
+
+  static String formatAsEmit(String event, Map data){
+    return '42["${event}",${data.toString()}]';
+  }
 }
 
 
