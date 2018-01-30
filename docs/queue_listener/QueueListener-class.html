@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the QueueListener class from the queue_listener library, for the Dart programming language.">
+  <title>QueueListener class - queue_listener library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">request_throttler</a></li>
+            <li><a href="queue_listener/queue_listener-library.html">queue_listener</a></li>
+            <li class="self-crumb">QueueListener</li>
+          </ol>
+          <div class="self-name">QueueListener</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">request_throttler</a></li>
+          <li><a href="queue_listener/queue_listener-library.html">queue_listener</a></li>
+          <li class="self-crumb">QueueListener</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">abstract class</span> QueueListener
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="queue_listener/QueueListener-class.html#instance-properties">Properties</a></li>
+          <li><a href="queue_listener/QueueListener-class.html#constructors">Constructors</a></li>
+          <li><a href="queue_listener/QueueListener-class.html#operators">Operators</a></li>
+          <li><a href="queue_listener/QueueListener-class.html#instance-methods">Methods</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">request_throttler</a></h5>
+    <h5><a href="queue_listener/queue_listener-library.html">queue_listener</a></h5>
+
+    <ol>
+    
+    
+    
+    
+    
+      <li class="section-title"><a href="queue_listener/queue_listener-library.html#classes">Classes</a></li>
+      <li><a href="queue_listener/QueueItem-class.html">QueueItem</a></li>
+      <li><a href="queue_listener/QueueListener-class.html">QueueListener</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+      <p>A scheduling class designed to feed a collection of items through a queue
+and execute them in order.</p>
+<p>There are many situations where certain things need to be done or certain
+tasks need to be executed in a organized and ordered fashion. In addition,
+many times such tasks will need to be executed continuously on specific
+intervals.</p>
+<p>The <a href="queue_listener/QueueListener-class.html">QueueListener</a> is a high level abstraction for such situations. <a href="queue_listener/QueueItem-class.html">QueueItem</a>s
+can be feed through the queue and executed in an ordered and organized
+fashion.</p>
+<p>A good example where something like this could come in handy is when making
+Http requests. Suppose a system needs to get multiple pieces of information
+from a REST Api, with some of that data needing to be fetched periodically.
+Most REST Api's will implement request limits, where any external system can
+only call the Api a certain number of time per minute or risk getting banned.</p>
+<p>An application which isn't careful with scheduling the requests to the api
+is in danger of violating rate limits, especially if certain requests need
+to be made periodically.</p>
+<p>This <a href="queue_listener/QueueListener-class.html">QueueListener</a> abstract class could be used to schedule any Http requests
+made to the external api and prevent concurrent requests from being made.</p>
+<p>Obviously Http requests is just one use-case, but any similar situation could
+leverage the scheduling capabilities of the <a href="queue_listener/QueueListener-class.html">QueueListener</a> to organize
+tasks.</p>
+    </section>
+    
+    <section>
+      <dl class="dl-horizontal">
+
+
+
+        <dt>Implemented by</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="vm_throttlers/HttpRequestThrottler-class.html">HttpRequestThrottler</a></li>
+          <li><a href="vm_throttlers/IoSocketConnectionThrottler-class.html">IoSocketConnectionThrottler</a></li>
+          <li><a href="browser_throttlers/WebSocketConnectionThrottler-class.html">WebSocketConnectionThrottler</a></li>
+          <li><a href="vm_throttlers/WebSocketConnectionThrottler-class.html">WebSocketConnectionThrottler</a></li>
+        </ul></dd>
+
+      </dl>
+    </section>
+
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="QueueListener" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/QueueListener.html">QueueListener</a></span><span class="signature">(<span class="parameter" id="-param-queueableItems"><span class="type-annotation">List&lt;<a href="queue_listener/QueueItem-class.html">QueueItem</a>&gt;</span> <span class="parameter-name">queueableItems</span></span>)</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="isRunning" class="property">
+          <span class="name"><a href="queue_listener/QueueListener/isRunning.html">isRunning</a></span>
+          <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">read-only</div>
+</dd>
+        <dt id="queueableItems" class="property">
+          <span class="name"><a href="queue_listener/QueueListener/queueableItems.html">queueableItems</a></span>
+          <span class="signature">&#8594; List&lt;<a href="queue_listener/QueueItem-class.html">QueueItem</a>&gt;</span>
+        </dt>
+        <dd>
+          <p>A list of items that are intended to be feed through the <a href="queue_listener/QueueListener/_queue.html">_queue</a>.</p>
+          <div class="features">read / write</div>
+</dd>
+        <dt id="timeOfLastStop" class="property">
+          <span class="name"><a href="queue_listener/QueueListener/timeOfLastStop.html">timeOfLastStop</a></span>
+          <span class="signature">&#8594; DateTime</span>
+        </dt>
+        <dd>
+          <p>Point in time when the system was last stopped, (i.e. <a href="queue_listener/QueueListener/_isRunning.html">_isRunning</a> was false).</p>
+          <div class="features">read / write</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="queue_listener/QueueListener/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="queue_listener/QueueListener/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">read-only, inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="queue_listener/QueueListener/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>The equality operator.</p>
+          <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="addQueuableItem" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/addQueuableItem.html">addQueuableItem</a></span><span class="signature">(<wbr><span class="parameter" id="addQueuableItem-param-queueableItem"><span class="type-annotation"><a href="queue_listener/QueueItem-class.html">QueueItem</a></span> <span class="parameter-name">queueableItem</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Allows additional <a href="queue_listener/QueueItem-class.html">QueueItem</a>s to be added to the system.</p>
+          
+</dd>
+        <dt id="listenForQueueItems" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/listenForQueueItems.html">listenForQueueItems</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Listens for and then processes item's in the queue.</p>
+          
+</dd>
+        <dt id="processQueueItem" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/processQueueItem.html">processQueueItem</a></span><span class="signature">(<wbr><span class="parameter" id="processQueueItem-param-queueItemToProcess"><span class="type-annotation"><a href="queue_listener/QueueItem-class.html">QueueItem</a></span> <span class="parameter-name">queueItemToProcess</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Method intended to be implemented by any clients subclassing <a href="queue_listener/QueueListener-class.html">QueueListener</a>.</p>
+          
+</dd>
+        <dt id="reQueueItem" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/reQueueItem.html">reQueueItem</a></span><span class="signature">(<wbr><span class="parameter" id="reQueueItem-param-queueItem"><span class="type-annotation"><a href="queue_listener/QueueItem-class.html">QueueItem</a></span> <span class="parameter-name">queueItem</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Re-queues an item in the <a href="queue_listener/QueueListener/_queue.html">_queue</a>.</p>
+          
+</dd>
+        <dt id="setupBeforeStart" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/setupBeforeStart.html">setupBeforeStart</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Get's called before the system is started.</p>
+          
+</dd>
+        <dt id="start" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/start.html">start</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Starts the <a href="queue_listener/QueueListener-class.html">QueueListener</a></p>
+          
+</dd>
+        <dt id="stop" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/stop.html">stop</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Stops the <a href="queue_listener/QueueListener-class.html">QueueListener</a></p>
+          
+</dd>
+        <dt id="tearDownBeforeStop" class="callable">
+          <span class="name"><a href="queue_listener/QueueListener/tearDownBeforeStop.html">tearDownBeforeStop</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Gets called before the system is stopped.</p>
+          
+</dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="queue_listener/QueueListener/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.</p>
+          <div class="features">inherited</div>
+</dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="queue_listener/QueueListener/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Returns a string representation of this object.</p>
+          <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>QueueListener</h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="queue_listener/QueueListener-class.html#constructors">Constructors</a></li>
+      <li><a href="queue_listener/QueueListener/QueueListener.html">QueueListener</a></li>
+    
+      <li class="section-title">
+        <a href="queue_listener/QueueListener-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a href="queue_listener/QueueListener/isRunning.html">isRunning</a></li>
+      <li><a href="queue_listener/QueueListener/queueableItems.html">queueableItems</a></li>
+      <li><a href="queue_listener/QueueListener/timeOfLastStop.html">timeOfLastStop</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="queue_listener/QueueListener-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="queue_listener/QueueListener-class.html#instance-methods">Methods</a></li>
+      <li><a href="queue_listener/QueueListener/addQueuableItem.html">addQueuableItem</a></li>
+      <li><a href="queue_listener/QueueListener/listenForQueueItems.html">listenForQueueItems</a></li>
+      <li><a href="queue_listener/QueueListener/processQueueItem.html">processQueueItem</a></li>
+      <li><a href="queue_listener/QueueListener/reQueueItem.html">reQueueItem</a></li>
+      <li><a href="queue_listener/QueueListener/setupBeforeStart.html">setupBeforeStart</a></li>
+      <li><a href="queue_listener/QueueListener/start.html">start</a></li>
+      <li><a href="queue_listener/QueueListener/stop.html">stop</a></li>
+      <li><a href="queue_listener/QueueListener/tearDownBeforeStop.html">tearDownBeforeStop</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/toString.html">toString</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          request_throttler 0.0.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

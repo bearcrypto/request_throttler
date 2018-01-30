@@ -5,8 +5,10 @@ import 'package:request_throttler/src/throttlers/browser/sockets/web_socket.dart
 import 'package:request_throttler/src/throttlers/vm/socket.dart';
 import 'package:request_throttler/src/throttlers/vm/sockets/socketio_socket.dart';
 
+/// Throttler used for controlling connections made to SocketIo socket servers.
+///
 class SocketIoConnectionThrottler extends WebSocketConnectionThrottler {
-  SocketIoConnectionThrottler(List<HtmlSocketRequestItem> queueableItems) : super(queueableItems);
+  SocketIoConnectionThrottler(List<BrowserSocketRequestItem> queueableItems) : super(queueableItems);
 
   @override
   processQueueItem(QueueItem queueItemToProcess) {
@@ -47,6 +49,9 @@ class SocketIoConnectionThrottler extends WebSocketConnectionThrottler {
     }
   }
 
+  /// Pings the SocketIo server repeatably in order to keep the connection alive.
+  /// Also handles a situation where the server times out and stops responding to
+  /// pings.
   void ping(SocketIoRequestItem requestItem){
     new Timer(const Duration(seconds: 25), () {
       if (requestItem.timeOfLastClose.add(const Duration(seconds: 25)).isBefore(

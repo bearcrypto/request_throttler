@@ -3,6 +3,12 @@ import 'package:http/http.dart' as Http;
 import 'package:http/browser_client.dart';
 import 'package:request_throttler/src/throttlers/vm/http.dart';
 
+/// A Request item intended to be used for making requests to apis using
+/// Browser Http requests.
+///
+/// This throttler will only be able to make requests to apis that use
+/// [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for
+/// cross-origin communication.
 class BrowserHttpRequestThrottler extends HttpRequestThrottler {
   BrowserHttpRequestThrottler(List<HttpRequestItem> queueableItems) : super(queueableItems);
 

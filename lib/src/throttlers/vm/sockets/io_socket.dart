@@ -3,9 +3,10 @@ import 'dart:io';
 import 'package:request_throttler/src/queue.dart';
 import 'package:request_throttler/src/throttlers/vm/socket.dart';
 
+/// Throttler used for controlling connections made to dart [Socket]s.
+///
 class IoSocketConnectionThrottler extends QueueListener{
   IoSocketConnectionThrottler(List<QueueItem> queueableItems) : super(queueableItems);
-
 
   @override
   void tearDownBeforeStop(){
@@ -57,12 +58,24 @@ class IoSocketConnectionThrottler extends QueueListener{
   }
 }
 
+/// A Request item intended to be used for integrating with [IoSocketConnectionThrottler]s.
+///
 abstract class IoSocketRequestItem extends SocketRequestItem {
+
+  /// The [Socket] object that is being used to make the connection.
+  ///
   Socket socket;
+  /// Indicates why the socket was closed.
+  ///
+  /// In certain circumstances, how the socket was closed and who closed it is
+  /// important for knowing whether or not the connection should be re-established
+  /// or not by the [IoSocketConnectionThrottler].
   int closeCode = 0;
   IoSocketRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
 }
 
+/// All of the information necessary for initiating a connection to a socket.
+///
 class IoSocketEndPoint extends SocketEndPoint {
   int port;
 

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the reQueueItem method from the QueueListener class, for the Dart programming language.">
+  <title>reQueueItem method - QueueListener class - queue_listener library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">request_throttler</a></li>
+            <li><a href="queue_listener/queue_listener-library.html">queue_listener</a></li>
+            <li><a href="queue_listener/QueueListener-class.html">QueueListener</a></li>
+            <li class="self-crumb">reQueueItem</li>
+          </ol>
+          <div class="self-name">reQueueItem</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">request_throttler</a></li>
+          <li><a href="queue_listener/queue_listener-library.html">queue_listener</a></li>
+          <li><a href="queue_listener/QueueListener-class.html">QueueListener</a></li>
+          <li class="self-crumb">reQueueItem</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">method</span> reQueueItem
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="queue_listener/QueueListener/reQueueItem.html#source">Source</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">request_throttler</a></h5>
+    <h5><a href="queue_listener/queue_listener-library.html">queue_listener</a></h5>
+    <h5><a href="queue_listener/QueueListener-class.html">QueueListener</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="queue_listener/QueueListener-class.html#constructors">Constructors</a></li>
+      <li><a href="queue_listener/QueueListener/QueueListener.html">QueueListener</a></li>
+    
+      <li class="section-title">
+        <a href="queue_listener/QueueListener-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a href="queue_listener/QueueListener/isRunning.html">isRunning</a></li>
+      <li><a href="queue_listener/QueueListener/queueableItems.html">queueableItems</a></li>
+      <li><a href="queue_listener/QueueListener/timeOfLastStop.html">timeOfLastStop</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="queue_listener/QueueListener-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="queue_listener/QueueListener-class.html#instance-methods">Methods</a></li>
+      <li><a href="queue_listener/QueueListener/addQueuableItem.html">addQueuableItem</a></li>
+      <li><a href="queue_listener/QueueListener/listenForQueueItems.html">listenForQueueItems</a></li>
+      <li><a href="queue_listener/QueueListener/processQueueItem.html">processQueueItem</a></li>
+      <li><a href="queue_listener/QueueListener/reQueueItem.html">reQueueItem</a></li>
+      <li><a href="queue_listener/QueueListener/setupBeforeStart.html">setupBeforeStart</a></li>
+      <li><a href="queue_listener/QueueListener/start.html">start</a></li>
+      <li><a href="queue_listener/QueueListener/stop.html">stop</a></li>
+      <li><a href="queue_listener/QueueListener/tearDownBeforeStop.html">tearDownBeforeStop</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="queue_listener/QueueListener/toString.html">toString</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <section class="multi-line-signature">
+      <span class="returntype">dynamic</span>
+      <span class="name ">reQueueItem</span>(<wbr><span class="parameter" id="reQueueItem-param-queueItem"><span class="type-annotation"><a href="queue_listener/QueueItem-class.html">QueueItem</a></span> <span class="parameter-name">queueItem</span></span>)
+    </section>
+    <section class="desc markdown">
+      <p>Re-queues an item in the <a href="queue_listener/QueueListener/_queue.html">_queue</a>.</p>
+<p>The system is capable of scheduling <a href="queue_listener/QueueItem-class.html">QueueItem</a>'s to be processed periodically.
+Suppose you wanted a <a href="queue_listener/QueueItem-class.html">QueueItem</a> to be run every 5 minutes. When that item is
+done being processed it can be re-queued by passing it into this method.</p>
+<p>The <a href="queue_listener/QueueListener/reQueueItem.html">reQueueItem</a> will figure out how long it took the item to go through the
+queue and be processed, and will schedule it to be processed again in the
+appropriate amount of time.</p>
+<p>For example if a <a href="queue_listener/QueueItem-class.html">QueueItem</a> needs to be run every 5 minutes, and the <a href="queue_listener/QueueListener/_queue.html">_queue</a>
+is backed up with requests, it might take the <a href="queue_listener/QueueItem-class.html">QueueItem</a> 3 minutes to make
+it through the queue and get processed. In this case the <a href="queue_listener/QueueListener/reQueueItem.html">reQueueItem</a> method
+will set a timer set to go off and place the <a href="queue_listener/QueueItem-class.html">QueueItem</a> in the <a href="queue_listener/QueueListener/_queue.html">_queue</a> in
+2 minutes.</p>
+<p>Or if it took the <a href="queue_listener/QueueItem-class.html">QueueItem</a> 6 minutes to make it through the queue, it will
+reschedule it immediately and place it in the <a href="queue_listener/QueueListener/_queue.html">_queue</a> without a waiting period.</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">reQueueItem(QueueItem queueItem){
+  if(this._isRunning){
+    queueItem.stopwatch.stop();
+    int millisecondsUntilNextEnqueue =
+        queueItem.totalRequeueInterval.inMilliseconds -
+            queueItem.stopwatch.elapsed.inMilliseconds;
+    queueItem.stopwatch.reset();
+    if(!millisecondsUntilNextEnqueue.isNegative){
+      new Timer(new Duration(milliseconds: millisecondsUntilNextEnqueue), (){
+        if(this._isRunning &amp;&amp; this.timeOfLastStop.add(new Duration(milliseconds: millisecondsUntilNextEnqueue)).isBefore(new DateTime.now())){
+          queueItem.stopwatch.start();
+          _queue.add(queueItem);
+          if(!this._listeningForNewQueueItems){
+            this.listenForQueueItems();
+          }
+        }
+      });
+    } else {
+      queueItem.stopwatch.start();
+      _queue.add(queueItem);
+      if(!this._listeningForNewQueueItems){
+        this.listenForQueueItems();
+      }
+    }
+  }
+}</pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          request_throttler 0.0.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the SocketIoRequestItem class from the vm_throttlers library, for the Dart programming language.">
+  <title>SocketIoRequestItem class - vm_throttlers library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">request_throttler</a></li>
+            <li><a href="vm_throttlers/vm_throttlers-library.html">vm_throttlers</a></li>
+            <li class="self-crumb">SocketIoRequestItem</li>
+          </ol>
+          <div class="self-name">SocketIoRequestItem</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">request_throttler</a></li>
+          <li><a href="vm_throttlers/vm_throttlers-library.html">vm_throttlers</a></li>
+          <li class="self-crumb">SocketIoRequestItem</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">abstract class</span> SocketIoRequestItem
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="vm_throttlers/SocketIoRequestItem-class.html#static-methods">Static Methods</a></li>
+          <li><a href="vm_throttlers/SocketIoRequestItem-class.html#instance-properties">Properties</a></li>
+          <li><a href="vm_throttlers/SocketIoRequestItem-class.html#constructors">Constructors</a></li>
+          <li><a href="vm_throttlers/SocketIoRequestItem-class.html#operators">Operators</a></li>
+          <li><a href="vm_throttlers/SocketIoRequestItem-class.html#instance-methods">Methods</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">request_throttler</a></h5>
+    <h5><a href="vm_throttlers/vm_throttlers-library.html">vm_throttlers</a></h5>
+
+    <ol>
+    
+    
+    
+    
+    
+      <li class="section-title"><a href="vm_throttlers/vm_throttlers-library.html#classes">Classes</a></li>
+      <li><a href="vm_throttlers/HttpEndPoint-class.html">HttpEndPoint</a></li>
+      <li><a href="vm_throttlers/HttpRequestItem-class.html">HttpRequestItem</a></li>
+      <li><a href="vm_throttlers/HttpRequestThrottler-class.html">HttpRequestThrottler</a></li>
+      <li><a href="vm_throttlers/IoSocketConnectionThrottler-class.html">IoSocketConnectionThrottler</a></li>
+      <li><a href="vm_throttlers/IoSocketEndPoint-class.html">IoSocketEndPoint</a></li>
+      <li><a href="vm_throttlers/IoSocketRequestItem-class.html">IoSocketRequestItem</a></li>
+      <li><a href="vm_throttlers/SocketIoConnectionThrottler-class.html">SocketIoConnectionThrottler</a></li>
+      <li><a href="vm_throttlers/SocketIoRequestItem-class.html">SocketIoRequestItem</a></li>
+      <li><a href="vm_throttlers/WebSocketConnectionThrottler-class.html">WebSocketConnectionThrottler</a></li>
+      <li><a href="vm_throttlers/WebSocketRequestItem-class.html">WebSocketRequestItem</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+      <p>A Request item intended to be used for integrating with <a href="vm_throttlers/SocketIoConnectionThrottler-class.html">SocketIoConnectionThrottler</a>s.</p>
+    </section>
+    
+    <section>
+      <dl class="dl-horizontal">
+        <dt>Inheritance</dt>
+        <dd><ul class="gt-separated dark clazz-relationships">
+          <li>Object</li>
+          <li><a href="queue_listener/QueueItem-class.html">QueueItem</a></li>
+          <li>SocketRequestItem</li>
+          <li><a href="vm_throttlers/WebSocketRequestItem-class.html">WebSocketRequestItem</a></li>
+          <li>SocketIoRequestItem</li>
+        </ul></dd>
+
+
+
+
+      </dl>
+    </section>
+
+
+
+    <section class="summary offset-anchor" id="static-methods">
+      <h2>Static Methods</h2>
+      <dl class="callables">
+        <dt id="formatAsEmit" class="callable">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/formatAsEmit.html">formatAsEmit</a></span><span class="signature">(<wbr><span class="parameter" id="formatAsEmit-param-event"><span class="type-annotation">String</span> <span class="parameter-name">event</span>, </span> <span class="parameter" id="formatAsEmit-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Helper method used to simulate the output created when "emitting" a message
+using the SocketIo protocol.</p>
+          
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="SocketIoRequestItem" class="callable">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/SocketIoRequestItem.html">SocketIoRequestItem</a></span><span class="signature">(<span class="parameter" id="-param-timeBetweenRequests"><span class="type-annotation">Duration</span> <span class="parameter-name">timeBetweenRequests</span>, </span> <span class="parameter" id="-param-recurring"><span class="type-annotation">bool</span> <span class="parameter-name">recurring</span>, </span> <span class="parameter" id="-param-runOnRestart"><span class="type-annotation">bool</span> <span class="parameter-name">runOnRestart</span></span>)</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="timeOfLastClose" class="property">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/timeOfLastClose.html">timeOfLastClose</a></span>
+          <span class="signature">&#8594; DateTime</span>
+        </dt>
+        <dd>
+          <p>Point in time when the socket's connection to the server was last closed.</p>
+          <div class="features">read / write</div>
+</dd>
+        <dt id="timeOfLastPong" class="property">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/timeOfLastPong.html">timeOfLastPong</a></span>
+          <span class="signature">&#8594; DateTime</span>
+        </dt>
+        <dd>
+          <p>Point in time when the server last sent a pong message (in response to a
+ping message).</p>
+          <div class="features">read / write</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="recurring" class="property inherited">
+          <span class="name"><a href="queue_listener/QueueItem/recurring.html">recurring</a></span>
+          <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd class="inherited">
+          <p>Determines whether or not this <a href="queue_listener/QueueItem-class.html">QueueItem</a> should be processed on a
+recurring bases.</p>
+          <div class="features">read / write, inherited</div>
+</dd>
+        <dt id="runOnRestart" class="property inherited">
+          <span class="name"><a href="queue_listener/QueueItem/runOnRestart.html">runOnRestart</a></span>
+          <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd class="inherited">
+          <p>Determines whether or not this <a href="queue_listener/QueueItem-class.html">QueueItem</a> should be run even after the
+<a href="queue_listener/QueueListener-class.html">QueueListener</a> is restarted (i.e. stopped and then started).</p>
+          <div class="features">read / write, inherited</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="shouldRequeueAutomatically" class="property inherited">
+          <span class="name"><a href="queue_listener/QueueItem/shouldRequeueAutomatically.html">shouldRequeueAutomatically</a></span>
+          <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd class="inherited">
+          <p>Determines whether this <a href="queue_listener/QueueItem-class.html">QueueItem</a> should be automatically requeued by
+the <a href="queue_listener/QueueListener-class.html">QueueListener</a>.</p>
+          <div class="features">read / write, inherited</div>
+</dd>
+        <dt id="socket" class="property inherited">
+          <span class="name"><a href="vm_throttlers/WebSocketRequestItem/socket.html">socket</a></span>
+          <span class="signature">&#8594; WebSocket</span>
+        </dt>
+        <dd class="inherited">
+          <p>The <code>WebSocket</code> object that is being used to make the connection.</p>
+          <div class="features">read / write, inherited</div>
+</dd>
+        <dt id="stopwatch" class="property inherited">
+          <span class="name"><a href="queue_listener/QueueItem/stopwatch.html">stopwatch</a></span>
+          <span class="signature">&#8594; Stopwatch</span>
+        </dt>
+        <dd class="inherited">
+          <p>Used by the <a href="queue_listener/QueueListener-class.html">QueueListener</a> to keep track of how long it's been since this
+<a href="queue_listener/QueueItem-class.html">QueueItem</a> was last submitted into the queue.</p>
+          <div class="features">read / write, inherited</div>
+</dd>
+        <dt id="timeBetweenRequests" class="property inherited">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/timeBetweenRequests.html">timeBetweenRequests</a></span>
+          <span class="signature">&#8594; Duration</span>
+        </dt>
+        <dd class="inherited">
+          <p>The length of time necessary to wait between subsequent socket connections.</p>
+          <div class="features">read / write, inherited</div>
+</dd>
+        <dt id="totalRequeueInterval" class="property inherited">
+          <span class="name"><a href="queue_listener/QueueItem/totalRequeueInterval.html">totalRequeueInterval</a></span>
+          <span class="signature">&#8594; Duration</span>
+        </dt>
+        <dd class="inherited">
+          <p>The total interval of time that this <a href="queue_listener/QueueItem-class.html">QueueItem</a> should be processed at.</p>
+          <div class="features">read / write, inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>The equality operator.</p>
+          <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="getSocketEndPoint" class="callable inherited">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/getSocketEndPoint.html">getSocketEndPoint</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; SocketEndPoint</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Returns the <code>SocketEndPoint</code> that should be connected to</p>
+          <div class="features">inherited</div>
+</dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.</p>
+          <div class="features">inherited</div>
+</dd>
+        <dt id="parseReceivedData" class="callable inherited">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/parseReceivedData.html">parseReceivedData</a></span><span class="signature">(<wbr><span class="parameter" id="parseReceivedData-param-receivedData"><span class="parameter-name">receivedData</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Parses and handles any data received from the socket on a continuing basis.</p>
+          <div class="features">inherited</div>
+</dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="vm_throttlers/SocketIoRequestItem/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Returns a string representation of this object.</p>
+          <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>SocketIoRequestItem</h5>
+    <ol>
+    
+    
+      <li class="section-title"><a href="vm_throttlers/SocketIoRequestItem-class.html#static-methods">Static methods</a></li>
+      <li><a href="vm_throttlers/SocketIoRequestItem/formatAsEmit.html">formatAsEmit</a></li>
+    
+      <li class="section-title"><a href="vm_throttlers/SocketIoRequestItem-class.html#constructors">Constructors</a></li>
+      <li><a href="vm_throttlers/SocketIoRequestItem/SocketIoRequestItem.html">SocketIoRequestItem</a></li>
+    
+      <li class="section-title">
+        <a href="vm_throttlers/SocketIoRequestItem-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a href="vm_throttlers/SocketIoRequestItem/timeOfLastClose.html">timeOfLastClose</a></li>
+      <li><a href="vm_throttlers/SocketIoRequestItem/timeOfLastPong.html">timeOfLastPong</a></li>
+      <li class="inherited"><a href="vm_throttlers/SocketIoRequestItem/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="queue_listener/QueueItem/recurring.html">recurring</a></li>
+      <li class="inherited"><a href="queue_listener/QueueItem/runOnRestart.html">runOnRestart</a></li>
+      <li class="inherited"><a href="vm_throttlers/SocketIoRequestItem/runtimeType.html">runtimeType</a></li>
+      <li class="inherited"><a href="queue_listener/QueueItem/shouldRequeueAutomatically.html">shouldRequeueAutomatically</a></li>
+      <li class="inherited"><a href="vm_throttlers/WebSocketRequestItem/socket.html">socket</a></li>
+      <li class="inherited"><a href="queue_listener/QueueItem/stopwatch.html">stopwatch</a></li>
+      <li class="inherited"><a href="vm_throttlers/SocketIoRequestItem/timeBetweenRequests.html">timeBetweenRequests</a></li>
+      <li class="inherited"><a href="queue_listener/QueueItem/totalRequeueInterval.html">totalRequeueInterval</a></li>
+    
+      <li class="section-title inherited"><a href="vm_throttlers/SocketIoRequestItem-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="vm_throttlers/SocketIoRequestItem/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title inherited"><a href="vm_throttlers/SocketIoRequestItem-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="vm_throttlers/SocketIoRequestItem/getSocketEndPoint.html">getSocketEndPoint</a></li>
+      <li class="inherited"><a href="vm_throttlers/SocketIoRequestItem/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="vm_throttlers/SocketIoRequestItem/parseReceivedData.html">parseReceivedData</a></li>
+      <li class="inherited"><a href="vm_throttlers/SocketIoRequestItem/toString.html">toString</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          request_throttler 0.0.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="vm_throttlers library API docs, for the Dart programming language.">
+  <title>vm_throttlers library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">request_throttler</a></li>
+            <li class="self-crumb">vm_throttlers</li>
+          </ol>
+          <div class="self-name">vm_throttlers</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">request_throttler</a></li>
+          <li class="self-crumb">vm_throttlers</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">library</span> vm_throttlers
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="vm_throttlers/vm_throttlers-library.html#classes">Classes</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">request_throttler</a></h5>
+
+
+    <ol>
+      <li class="section-title"><a href="index.html#libraries">Libraries</a></li>
+      <li><a href="browser_throttlers/browser_throttlers-library.html">browser_throttlers</a></li>
+      <li><a href="queue_listener/queue_listener-library.html">queue_listener</a></li>
+      <li><a href="vm_throttlers/vm_throttlers-library.html">vm_throttlers</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+      <p>A collection of throttlers used for scheduling requests made to external systems
+from the vm.</p>
+<p>Any vm apps can funnel their requests through the appropriate
+throttlers to ensure that the external system in question isn't overwhelmed
+with requests.</p>
+    </section>
+    
+
+
+
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="HttpEndPoint">
+          <span class="name "><a href="vm_throttlers/HttpEndPoint-class.html">HttpEndPoint</a></span>
+        </dt>
+        <dd>
+          <p>All of the information necessary for making a request to an external api.</p>
+        </dd>
+        <dt id="HttpRequestItem">
+          <span class="name "><a href="vm_throttlers/HttpRequestItem-class.html">HttpRequestItem</a></span>
+        </dt>
+        <dd>
+          <p>A Request item intended to be used for integrating with external apis through
+http requests.</p>
+        </dd>
+        <dt id="HttpRequestThrottler">
+          <span class="name "><a href="vm_throttlers/HttpRequestThrottler-class.html">HttpRequestThrottler</a></span>
+        </dt>
+        <dd>
+          <p>A Request item intended to be used for making requests to apis using
+Http requests.</p>
+        </dd>
+        <dt id="IoSocketConnectionThrottler">
+          <span class="name "><a href="vm_throttlers/IoSocketConnectionThrottler-class.html">IoSocketConnectionThrottler</a></span>
+        </dt>
+        <dd>
+          <p>Throttler used for controlling connections made to dart <code>Socket</code>s.</p>
+        </dd>
+        <dt id="IoSocketEndPoint">
+          <span class="name "><a href="vm_throttlers/IoSocketEndPoint-class.html">IoSocketEndPoint</a></span>
+        </dt>
+        <dd>
+          <p>All of the information necessary for initiating a connection to a socket.</p>
+        </dd>
+        <dt id="IoSocketRequestItem">
+          <span class="name "><a href="vm_throttlers/IoSocketRequestItem-class.html">IoSocketRequestItem</a></span>
+        </dt>
+        <dd>
+          <p>A Request item intended to be used for integrating with <a href="vm_throttlers/IoSocketConnectionThrottler-class.html">IoSocketConnectionThrottler</a>s.</p>
+        </dd>
+        <dt id="SocketIoConnectionThrottler">
+          <span class="name "><a href="vm_throttlers/SocketIoConnectionThrottler-class.html">SocketIoConnectionThrottler</a></span>
+        </dt>
+        <dd>
+          <p>Throttler used for controlling connections made to SocketIo socket servers.</p>
+        </dd>
+        <dt id="SocketIoRequestItem">
+          <span class="name "><a href="vm_throttlers/SocketIoRequestItem-class.html">SocketIoRequestItem</a></span>
+        </dt>
+        <dd>
+          <p>A Request item intended to be used for integrating with <a href="vm_throttlers/SocketIoConnectionThrottler-class.html">SocketIoConnectionThrottler</a>s.</p>
+        </dd>
+        <dt id="WebSocketConnectionThrottler">
+          <span class="name "><a href="vm_throttlers/WebSocketConnectionThrottler-class.html">WebSocketConnectionThrottler</a></span>
+        </dt>
+        <dd>
+          <p>Throttler used for controlling connections made to a <code>WebSocket</code> server.</p>
+        </dd>
+        <dt id="WebSocketRequestItem">
+          <span class="name "><a href="vm_throttlers/WebSocketRequestItem-class.html">WebSocketRequestItem</a></span>
+        </dt>
+        <dd>
+          <p>A Request item intended to be used for integrating with <a href="vm_throttlers/WebSocketConnectionThrottler-class.html">WebSocketConnectionThrottler</a>s.</p>
+        </dd>
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>vm_throttlers</h5>
+    <ol>
+    
+    
+    
+    
+    
+      <li class="section-title"><a href="vm_throttlers/vm_throttlers-library.html#classes">Classes</a></li>
+      <li><a href="vm_throttlers/HttpEndPoint-class.html">HttpEndPoint</a></li>
+      <li><a href="vm_throttlers/HttpRequestItem-class.html">HttpRequestItem</a></li>
+      <li><a href="vm_throttlers/HttpRequestThrottler-class.html">HttpRequestThrottler</a></li>
+      <li><a href="vm_throttlers/IoSocketConnectionThrottler-class.html">IoSocketConnectionThrottler</a></li>
+      <li><a href="vm_throttlers/IoSocketEndPoint-class.html">IoSocketEndPoint</a></li>
+      <li><a href="vm_throttlers/IoSocketRequestItem-class.html">IoSocketRequestItem</a></li>
+      <li><a href="vm_throttlers/SocketIoConnectionThrottler-class.html">SocketIoConnectionThrottler</a></li>
+      <li><a href="vm_throttlers/SocketIoRequestItem-class.html">SocketIoRequestItem</a></li>
+      <li><a href="vm_throttlers/WebSocketConnectionThrottler-class.html">WebSocketConnectionThrottler</a></li>
+      <li><a href="vm_throttlers/WebSocketRequestItem-class.html">WebSocketRequestItem</a></li>
+    
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          request_throttler 0.0.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

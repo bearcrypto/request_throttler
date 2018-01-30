@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:request_throttler/src/queue.dart';
 import 'package:request_throttler/src/throttlers/vm/socket.dart';
 
+/// Throttler used for controlling connections made to a [WebSocket] server.
+///
 class WebSocketConnectionThrottler extends QueueListener{
   WebSocketConnectionThrottler(List<WebSocketRequestItem> queueableItems) : super(queueableItems);
 
@@ -54,7 +56,11 @@ class WebSocketConnectionThrottler extends QueueListener{
   }
 }
 
+/// A Request item intended to be used for integrating with [WebSocketConnectionThrottler]s.
+///
 abstract class WebSocketRequestItem extends SocketRequestItem {
+  /// The [WebSocket] object that is being used to make the connection.
+  ///
   WebSocket socket;
   WebSocketRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
 }
