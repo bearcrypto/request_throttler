@@ -23,6 +23,7 @@ class HtmlSocketConnectionThrottler extends QueueListener{
       WebSocket webSocket = new WebSocket(socketEndPoint.url);
       if(webSocket != null){
         webSocket.onOpen.listen((connection) {
+          webSocket.send(socketEndPoint.handshakeData);
           webSocket.onMessage.listen((data) {
             queueItemToProcess.parseReceivedData(data.data);
           });
