@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:html';
 import 'package:request_throttler/src/queue.dart';
-import 'package:request_throttler/src/throttlers/sockets/socket.dart';
+import 'package:request_throttler/src/throttlers/vm/socket.dart';
 
-class HtmlSocketConnectionThrottler extends QueueListener{
-  HtmlSocketConnectionThrottler(List<HtmlSocketRequestItem> queueableItems) : super(queueableItems);
+class WebSocketConnectionThrottler extends QueueListener{
+  WebSocketConnectionThrottler(List<HtmlSocketRequestItem> queueableItems) : super(queueableItems);
 
   @override
   void tearDownBeforeStop(){

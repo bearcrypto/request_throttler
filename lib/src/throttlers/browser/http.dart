@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:http/http.dart' as Http;
 import 'package:http/browser_client.dart';
-import 'package:request_throttler/src/throttlers/http/http.dart';
+import 'package:request_throttler/src/throttlers/vm/http.dart';
 
 class BrowserHttpRequestThrottler extends HttpRequestThrottler {
   BrowserHttpRequestThrottler(List<HttpRequestItem> queueableItems) : super(queueableItems);

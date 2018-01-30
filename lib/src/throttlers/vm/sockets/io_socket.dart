@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:request_throttler/src/queue.dart';
-import 'package:request_throttler/src/throttlers/sockets/socket.dart';
+import 'package:request_throttler/src/throttlers/vm/socket.dart';
 
 class IoSocketConnectionThrottler extends QueueListener{
   IoSocketConnectionThrottler(List<QueueItem> queueableItems) : super(queueableItems);

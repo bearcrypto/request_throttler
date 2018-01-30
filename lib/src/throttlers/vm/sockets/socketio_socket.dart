@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:request_throttler/src/queue.dart';
-import 'package:request_throttler/src/throttlers/sockets/socket.dart';
-import 'package:request_throttler/src/throttlers/sockets/vm/web_socket.dart';
+import 'package:request_throttler/src/throttlers/vm/socket.dart';
+import 'package:request_throttler/src/throttlers/vm/sockets/web_socket.dart';
 
 class SocketIoConnectionThrottler extends WebSocketConnectionThrottler{
 
@@ -86,5 +86,6 @@ abstract class SocketIoRequestItem extends WebSocketRequestItem {
   DateTime timeOfLastPong = new DateTime.now();
   SocketIoRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
 }
+
 
 

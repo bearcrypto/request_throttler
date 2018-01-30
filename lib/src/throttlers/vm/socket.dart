@@ -17,3 +17,4 @@ class SocketEndPoint{
   String handshakeData;
   SocketEndPoint(this.url, this.handshakeData);
 }
+
