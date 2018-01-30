@@ -19,9 +19,7 @@ class HtmlSocketConnectionThrottler extends QueueListener{
   processQueueItem(QueueItem queueItemToProcess) {
     if(queueItemToProcess is HtmlSocketRequestItem) {
       SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();
-
       WebSocket webSocket = new WebSocket(socketEndPoint.url);
-      if(webSocket != null){
         webSocket.onOpen.listen((connection) {
           webSocket.send(socketEndPoint.handshakeData);
           webSocket.onMessage.listen((data) {
@@ -49,7 +47,6 @@ class HtmlSocketConnectionThrottler extends QueueListener{
           });
         });
       }
-    }
   }
 }
 
