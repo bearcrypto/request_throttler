@@ -140,7 +140,7 @@ abstract class QueueListener {
     if(this._queue.contains(queueableItem)){
       this._queue.remove(queueableItem);
     }
-
+    this.tearDownBeforeRemove(queueableItem);
   }
 
   /// Re-queues an item in the [_queue].
