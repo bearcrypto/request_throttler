@@ -2,18 +2,17 @@ import 'dart:async';
 import 'dart:html';
 import 'package:request_throttler/src/queue.dart';
 import 'package:request_throttler/src/throttlers/browser/sockets/web_socket.dart';
-import 'package:request_throttler/src/throttlers/vm/socket.dart';
-import 'package:request_throttler/src/throttlers/vm/sockets/socketio_socket.dart';
+import 'package:request_throttler/src/throttlers/vm/socket.dart' as Vm;
 
 /// Throttler used for controlling connections made to SocketIo socket servers.
 ///
 class SocketIoConnectionThrottler extends WebSocketConnectionThrottler {
-  SocketIoConnectionThrottler(List<BrowserSocketRequestItem> queueableItems) : super(queueableItems);
+  SocketIoConnectionThrottler(List<SocketRequestItem> queueableItems) : super(queueableItems);
 
   @override
   processQueueItem(QueueItem queueItemToProcess) {
-    if(queueItemToProcess is BrowserSocketIoRequestItem) {
-      SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();
+    if(queueItemToProcess is SocketIoRequestItem) {
+      Vm.SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();
       WebSocket webSocket = new WebSocket(socketEndPoint.url);
       webSocket.onOpen.listen((connection) {
         queueItemToProcess.socket = webSocket;
@@ -53,7 +52,7 @@ class SocketIoConnectionThrottler extends WebSocketConnectionThrottler {
   /// Pings the SocketIo server repeatably in order to keep the connection alive.
   /// Also handles a situation where the server times out and stops responding to
   /// pings.
-  void ping(BrowserSocketIoRequestItem requestItem){
+  void ping(SocketIoRequestItem requestItem){
     new Timer(const Duration(seconds: 25), () {
       if (requestItem.timeOfLastClose.add(const Duration(seconds: 25)).isBefore(
           new DateTime.now())) {
@@ -81,7 +80,7 @@ class SocketIoConnectionThrottler extends WebSocketConnectionThrottler {
 
 /// A Request item intended to be used for integrating with [SocketIoConnectionThrottler]s.
 ///
-abstract class BrowserSocketIoRequestItem extends BrowserSocketRequestItem {
+abstract class SocketIoRequestItem extends SocketRequestItem {
   /// Point in time when the socket's connection to the server was last closed.
   ///
   /// This is used by the [SocketIoConnectionThrottler]'s ping method to determine
@@ -94,7 +93,7 @@ abstract class BrowserSocketIoRequestItem extends BrowserSocketRequestItem {
   /// the remote server has timed out or not.
   DateTime timeOfLastPong = new DateTime.now();
 
-  BrowserSocketIoRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
+  SocketIoRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
 
   /// Helper method used to simulate the output created when "emitting" a message
   /// using the SocketIo protocol.

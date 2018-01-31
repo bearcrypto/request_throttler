@@ -1,17 +1,17 @@
 import 'dart:async';
 import 'dart:html';
 import 'package:request_throttler/src/queue.dart';
-import 'package:request_throttler/src/throttlers/vm/socket.dart';
+import 'package:request_throttler/src/throttlers/vm/socket.dart' as Vm;
 
 /// Throttler used for controlling connections made to a [WebSocket] server.
 ///
 class WebSocketConnectionThrottler extends QueueListener{
-  WebSocketConnectionThrottler(List<BrowserSocketRequestItem> queueableItems) : super(queueableItems);
+  WebSocketConnectionThrottler(List<SocketRequestItem> queueableItems) : super(queueableItems);
 
   @override
   void tearDownBeforeStop(){
     this.queueableItems.forEach((QueueItem queueItem){
-      if(queueItem is BrowserSocketRequestItem && queueItem.socket != null){
+      if(queueItem is SocketRequestItem && queueItem.socket != null){
         queueItem.socket.close(3005);
       }
     });
@@ -19,15 +19,15 @@ class WebSocketConnectionThrottler extends QueueListener{
 
   @override
   void tearDownBeforeRemove(QueueItem itemBeingRemoved){
-    if(itemBeingRemoved is BrowserSocketRequestItem && itemBeingRemoved.socket != null){
+    if(itemBeingRemoved is SocketRequestItem && itemBeingRemoved.socket != null){
       itemBeingRemoved.socket.close(3005);
     }
   }
 
   @override
   processQueueItem(QueueItem queueItemToProcess) {
-    if(queueItemToProcess is BrowserSocketRequestItem) {
-      SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();
+    if(queueItemToProcess is SocketRequestItem) {
+      Vm.SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();
       WebSocket webSocket = new WebSocket(socketEndPoint.url);
         webSocket.onOpen.listen((connection) {
           webSocket.send(socketEndPoint.handshakeData);
@@ -61,7 +61,7 @@ class WebSocketConnectionThrottler extends QueueListener{
 
 /// A Request item intended to be used for integrating with [WebSocketConnectionThrottler]s.
 ///
-abstract class BrowserSocketRequestItem extends SocketRequestItem {
+abstract class SocketRequestItem extends Vm.SocketRequestItem {
   WebSocket socket;
-  BrowserSocketRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
+  SocketRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
 }

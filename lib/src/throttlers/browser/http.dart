@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:http/http.dart' as Http;
 import 'package:http/browser_client.dart';
-import 'package:request_throttler/src/throttlers/vm/http.dart';
+import 'package:request_throttler/src/throttlers/vm/http.dart' as Vm;
 
 /// A Request item intended to be used for making requests to apis using
 /// Browser Http requests.
@@ -9,8 +9,8 @@ import 'package:request_throttler/src/throttlers/vm/http.dart';
 /// This throttler will only be able to make requests to apis that use
 /// [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for
 /// cross-origin communication.
-class BrowserHttpRequestThrottler extends HttpRequestThrottler {
-  BrowserHttpRequestThrottler(List<HttpRequestItem> queueableItems) : super(queueableItems);
+class HttpRequestThrottler extends Vm.HttpRequestThrottler {
+  HttpRequestThrottler(List<Vm.HttpRequestItem> queueableItems) : super(queueableItems);
 
   @override
   Future<Http.Response> makeHttpRequest(String url) async {
