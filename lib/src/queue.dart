@@ -213,6 +213,8 @@ abstract class QueueListener {
           await this.processQueueItem(queueItemBeingProcessed);
           if(queueItemBeingProcessed.recurring && queueItemBeingProcessed.shouldRequeueAutomatically){
             this.reQueueItem(queueItemBeingProcessed);
+          } else if (!queueItemBeingProcessed.recurring && !queueItemBeingProcessed.runOnRestart){
+            this.queueableItems.remove(queueItemBeingProcessed);
           }
           listenForQueueItems();
         });
