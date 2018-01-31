@@ -4,8 +4,6 @@
     <list default="true" id="d248887d-5f91-4eba-afe3-2db0b5f8b6e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/lib/src/throttlers/browser/http.dart" afterPath="$PROJECT_DIR$/lib/src/throttlers/browser/http.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart" afterPath="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart" afterPath="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,7 +17,7 @@
       <file leaf-file-name="socket.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/socket.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -29,8 +27,8 @@
       <file leaf-file-name="http.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/http.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="1" />
+            <state relative-caret-position="161">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="127" selection-end-column="1" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#114#186#0" expanded="false" />
@@ -50,7 +48,7 @@
       <file leaf-file-name="io_socket.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/io_socket.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="828">
               <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -95,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+              <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#248#327#0" expanded="false" />
@@ -129,12 +127,16 @@
       <file leaf-file-name="http.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/http.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="276">
+              <caret line="79" column="76" lean-forward="true" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <element signature="e#176#248#0" expanded="false" />
+                <element signature="e#227#299#0" expanded="false" />
                 <element signature="n#!!block;n#HttpRequestThrottler#0" expanded="false" />
+                <element signature="e#1145#1226#0" expanded="false" />
+                <element signature="n#!!block;n#HttpRequestItem#0" expanded="false" />
+                <element signature="e#3061#3138#0" expanded="false" />
+                <element signature="n#!!block;n#HttpEndPoint#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -181,14 +183,14 @@
         <option value="$PROJECT_DIR$/lib/src/throttlers/vm/sockets/io_socket.dart" />
         <option value="$PROJECT_DIR$/lib/src/throttlers/vm/sockets/web_socket.dart" />
         <option value="$PROJECT_DIR$/lib/src/queue.dart" />
-        <option value="$PROJECT_DIR$/lib/src/throttlers/browser/http.dart" />
         <option value="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart" />
         <option value="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart" />
         <option value="$PROJECT_DIR$/lib/src/throttlers/http.dart" />
+        <option value="$PROJECT_DIR$/lib/src/throttlers/browser/http.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="878" />
@@ -208,7 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,13 +236,38 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="throttlers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="request_throttler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="request_throttler" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="throttlers" type="462c0819:PsiDirectoryNode" />
+              <item name="browser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="request_throttler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="request_throttler" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="throttlers" type="462c0819:PsiDirectoryNode" />
+              <item name="browser" type="462c0819:PsiDirectoryNode" />
+              <item name="sockets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="request_throttler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="request_throttler" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="throttlers" type="462c0819:PsiDirectoryNode" />
+              <item name="vm" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,10 +400,10 @@
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31076178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26752505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27110156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -401,6 +428,134 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/http.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#114#186#0" expanded="false" />
+            <element signature="n#!!block;n#HttpRequestThrottler#0" expanded="false" />
+            <element signature="e#1041#1570#0" expanded="false" />
+            <element signature="e#1710#2127#0" expanded="false" />
+            <element signature="e#2429#2804#0" expanded="false" />
+            <element signature="e#2809#2890#0" expanded="false" />
+            <element signature="n#!!block;n#HttpRequestItem#0" expanded="false" />
+            <element signature="e#4725#4802#0" expanded="false" />
+            <element signature="n#!!block;n#HttpEndPoint#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/io_socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#416#522#0" expanded="false" />
+            <element signature="e#591#639#0" expanded="false" />
+            <element signature="e#688#855#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/socketio_socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#552#2366#0" expanded="false" />
+            <element signature="e#2370#2449#0" expanded="false" />
+            <element signature="e#2589#3249#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/web_socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="73" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#157#233#0" expanded="false" />
+            <element signature="n#!!block;n#WebSocketConnectionThrottler#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#248#327#0" expanded="false" />
+            <element signature="n#!!block;n#SocketIoConnectionThrottler#0" expanded="false" />
+            <element signature="e#562#1960#0" expanded="false" />
+            <element signature="e#1964#2043#0" expanded="false" />
+            <element signature="e#2183#2792#0" expanded="false" />
+            <element signature="e#2798#2889#0" expanded="false" />
+            <element signature="n#!!block;n#SocketIoRequestItem#0" expanded="false" />
+            <element signature="e#2959#3036#0" expanded="false" />
+            <element signature="e#3210#3286#0" expanded="false" />
+            <element signature="e#3634#3713#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/browser_throttlers.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#468#0" expanded="true" />
+            <element signature="e#306#348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#165#241#0" expanded="false" />
+            <element signature="n#!!block;n#WebSocketConnectionThrottler#0" expanded="false" />
+            <element signature="e#440#624#0" expanded="false" />
+            <element signature="e#693#829#0" expanded="false" />
+            <element signature="e#2116#2208#0" expanded="false" />
+            <element signature="n#!!block;n#SocketRequestItem#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/http.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#227#299#0" expanded="false" />
+            <element signature="n#!!block;n#HttpRequestThrottler#0" expanded="false" />
+            <element signature="e#1145#1226#0" expanded="false" />
+            <element signature="n#!!block;n#HttpRequestItem#0" expanded="false" />
+            <element signature="e#3061#3138#0" expanded="false" />
+            <element signature="n#!!block;n#HttpEndPoint#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/queue.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="989">
@@ -1026,7 +1181,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/socket.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1034,7 +1189,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/io_socket.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="828">
           <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
@@ -1059,7 +1214,7 @@
     <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#248#327#0" expanded="false" />
@@ -1092,10 +1247,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/http.dart" />
     <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/http.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="1" />
+        <state relative-caret-position="161">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="127" selection-end-column="1" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#114#186#0" expanded="false" />
@@ -1111,22 +1267,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/http.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="127" column="1" lean-forward="false" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/http.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="276">
+          <caret line="79" column="76" lean-forward="true" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#176#248#0" expanded="false" />
+            <element signature="e#227#299#0" expanded="false" />
             <element signature="n#!!block;n#HttpRequestThrottler#0" expanded="false" />
+            <element signature="e#1145#1226#0" expanded="false" />
+            <element signature="n#!!block;n#HttpRequestItem#0" expanded="false" />
+            <element signature="e#3061#3138#0" expanded="false" />
+            <element signature="n#!!block;n#HttpEndPoint#0" expanded="false" />
           </folding>
         </state>
       </provider>
