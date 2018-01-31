@@ -18,6 +18,14 @@ class WebSocketConnectionThrottler extends QueueListener{
   }
 
   @override
+  void tearDownBeforeRemove(QueueItem itemBeingRemoved){
+    if(itemBeingRemoved is WebSocketRequestItem && itemBeingRemoved.socket != null){
+      itemBeingRemoved.socket.close(3005);
+    }
+  }
+
+
+  @override
   processQueueItem(QueueItem queueItemToProcess) async {
     if(queueItemToProcess is WebSocketRequestItem){
       SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();

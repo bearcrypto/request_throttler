@@ -11,12 +11,20 @@ class IoSocketConnectionThrottler extends QueueListener{
   @override
   void tearDownBeforeStop(){
     this.queueableItems.forEach((QueueItem queueItem){
-      if(queueItem is IoSocketRequestItem && queueItem.socket != null){
-        queueItem.socket.close();
-        queueItem.closeCode = 3005;
-
-      }
+      this.tearDownSocket(queueItem);
     });
+  }
+
+  @override
+  void tearDownBeforeRemove(QueueItem itemBeingRemoved){
+    this.tearDownSocket(itemBeingRemoved);
+  }
+
+  void tearDownSocket(QueueItem itemToTearDown){
+    if(itemToTearDown is IoSocketRequestItem && itemToTearDown.socket != null){
+      itemToTearDown.socket.close();
+      itemToTearDown.closeCode = 3005;
+    }
   }
 
   @override

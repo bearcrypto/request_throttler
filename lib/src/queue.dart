@@ -135,6 +135,14 @@ abstract class QueueListener {
     }
   }
 
+  void removeQueableItem(QueueItem queueableItem){
+    this.queueableItems.remove(queueableItem);
+    if(this._queue.contains(queueableItem)){
+      this._queue.remove(queueableItem);
+    }
+
+  }
+
   /// Re-queues an item in the [_queue].
   ///
   /// The system is capable of scheduling [QueueItem]'s to be processed periodically.
@@ -238,6 +246,13 @@ abstract class QueueListener {
   /// before the system shuts down. This could include closing active connections,
   /// closing open files, etc.
   void tearDownBeforeStop(){}
+
+  /// Gets called before [itemBeingRemoved] gets removed from the system.
+  ///
+  /// This function is optionally meant for subclasses to clean anything up
+  /// before the [itemBeingRemoved] is removed. This could include closing active
+  /// connections, closing open files, etc.
+  void tearDownBeforeRemove(QueueItem itemBeingRemoved){}
 
   /// Get's called before the system is started.
   ///
