@@ -218,7 +218,9 @@ abstract class QueueListener {
         this._listeningForNewQueueItems = true;
         new Timer(const Duration(microseconds: 1), () async {
           QueueItem queueItemBeingProcessed = _queue.removeFirst();
-          await this.processQueueItem(queueItemBeingProcessed);
+          try {
+            await this.processQueueItem(queueItemBeingProcessed);
+          } catch(e){}
           if(queueItemBeingProcessed.recurring && queueItemBeingProcessed.shouldRequeueAutomatically){
             this.reQueueItem(queueItemBeingProcessed);
           } else if (!queueItemBeingProcessed.recurring && !queueItemBeingProcessed.runOnRestart){
