@@ -19,11 +19,13 @@ class SocketIoConnectionThrottler extends WebSocketConnectionThrottler {
         this.ping(queueItemToProcess);
         webSocket.send(socketEndPoint.handshakeData);
         webSocket.onMessage.listen((data) {
-          if(data.toString()[0] == "3"){
-            queueItemToProcess.timeOfLastPong = new DateTime.now();
-          } else {
-            queueItemToProcess.parseReceivedData(data.data);
-          }
+          try {
+            if(data.toString()[0] == "3"){
+              queueItemToProcess.timeOfLastPong = new DateTime.now();
+            } else {
+              queueItemToProcess.parseReceivedData(data.data);
+            }
+          }catch(e){}
         });
         webSocket.onClose.listen((close) {
           if (queueItemToProcess.recurring && close.code != 3005) {

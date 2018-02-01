@@ -68,7 +68,11 @@ class WebSocketConnectionThrottler extends QueueListener{
             queueItemToProcess.socket.add(socketEndPoint.handshakeData);
           }
           queueItemToProcess.socket.listen(
-              queueItemToProcess.parseReceivedData,
+              (data){
+                try {
+                  queueItemToProcess.parseReceivedData(data);
+                } catch(e){}
+              },
               onDone: (){
                 if(queueItemToProcess.recurring && queueItemToProcess.socket.closeCode != 3005){
                   new Timer(const Duration(seconds: 1), (){

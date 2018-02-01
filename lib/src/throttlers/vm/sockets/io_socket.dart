@@ -69,8 +69,13 @@ class IoSocketConnectionThrottler extends QueueListener{
           if(socketEndPoint.handshakeData != null){
             queueItemToProcess.socket.write(socketEndPoint.handshakeData);
           }
+
           queueItemToProcess.socket.listen(
-              queueItemToProcess.parseReceivedData,
+              (data){
+                try {
+                  queueItemToProcess.parseReceivedData(data);
+                } catch(e){}
+              },
               onDone: (){
                 if(queueItemToProcess.recurring && queueItemToProcess.closeCode != 3005){
                   new Timer(const Duration(seconds: 1), (){

@@ -31,11 +31,14 @@ class SocketIoConnectionThrottler extends WebSocketConnectionThrottler{
           }
           queueItemToProcess.socket.listen(
               (data){
-                if(data.toString()[0] == "3"){
-                  queueItemToProcess.timeOfLastPong = new DateTime.now();
-                } else {
-                  queueItemToProcess.parseReceivedData(data);
-                }
+                try {
+                  if(data.toString()[0] == "3"){
+                    queueItemToProcess.timeOfLastPong = new DateTime.now();
+                  } else {
+                    queueItemToProcess.parseReceivedData(data);
+                  }
+                } catch(e){}
+
               },
               onDone: (){
                 queueItemToProcess.timeOfLastClose = new DateTime.now();

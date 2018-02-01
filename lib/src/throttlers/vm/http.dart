@@ -30,7 +30,9 @@ class HttpRequestThrottler extends QueueListener{
       for(int i = 0; i < httpEndPoints.length; i++){
         this.makeHttpRequest(httpEndPoints[i].url).then((Http.Response response){
           if(response != null && response.statusCode == 200){
-            queueItemToProcess.parseReceivedData(response.body, httpEndPoints[i]);
+            try {
+              queueItemToProcess.parseReceivedData(response.body, httpEndPoints[i]);
+            } catch(e){}
           }
         });
         await new Future.delayed(queueItemToProcess.timeBetweenRequests);
