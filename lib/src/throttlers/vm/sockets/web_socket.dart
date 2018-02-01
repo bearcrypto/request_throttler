@@ -1,17 +1,41 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:request_throttler/request_items.dart';
 import 'package:request_throttler/src/queue.dart';
-import 'package:request_throttler/src/throttlers/vm/socket.dart';
 
 /// Throttler used for controlling connections made to a [WebSocket] server.
 ///
 class WebSocketConnectionThrottler extends QueueListener{
-  WebSocketConnectionThrottler(List<WebSocketRequestItem> queueableItems) : super(queueableItems);
+  WebSocketConnectionThrottler(List<SocketRequestItem> queueableItems) : super(queueableItems);
+
+  void sendDataOverSocket(String data, SocketRequestItem requestItem){
+    if(requestItem is SocketRequestItem && requestItem.socket != null && requestItem.socket is WebSocket){
+      try {
+        requestItem.socket.add(data);
+      } catch (e) {}
+    }
+  }
+
+  @override
+  void setupBeforeStart(){
+    this.queueableItems.forEach((queueableItem){
+      if(queueableItem is SocketRequestItem){
+        queueableItem.sendDataOverSocketCallback = this.sendDataOverSocket;
+      }
+    });
+  }
+
+  @override
+  void setupBeforeAdd(QueueItem itemBeingAdded) {
+    if(itemBeingAdded is SocketRequestItem){
+      itemBeingAdded.sendDataOverSocketCallback = this.sendDataOverSocket;
+    }
+  }
 
   @override
   void tearDownBeforeStop(){
     this.queueableItems.forEach((QueueItem queueItem){
-      if(queueItem is WebSocketRequestItem && queueItem.socket != null){
+      if(queueItem is SocketRequestItem && queueItem.socket != null){
         queueItem.socket.close(3005);
       }
     });
@@ -19,7 +43,7 @@ class WebSocketConnectionThrottler extends QueueListener{
 
   @override
   void tearDownBeforeRemove(QueueItem itemBeingRemoved){
-    if(itemBeingRemoved is WebSocketRequestItem && itemBeingRemoved.socket != null){
+    if(itemBeingRemoved is SocketRequestItem && itemBeingRemoved.socket != null){
       itemBeingRemoved.socket.close(3005);
     }
   }
@@ -27,7 +51,7 @@ class WebSocketConnectionThrottler extends QueueListener{
 
   @override
   processQueueItem(QueueItem queueItemToProcess) async {
-    if(queueItemToProcess is WebSocketRequestItem){
+    if(queueItemToProcess is SocketRequestItem){
       SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();
       WebSocket.connect(socketEndPoint.url)
           .catchError((error){
@@ -64,11 +88,3 @@ class WebSocketConnectionThrottler extends QueueListener{
   }
 }
 
-/// A Request item intended to be used for integrating with [WebSocketConnectionThrottler]s.
-///
-abstract class WebSocketRequestItem extends SocketRequestItem {
-  /// The [WebSocket] object that is being used to make the connection.
-  ///
-  WebSocket socket;
-  WebSocketRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
-}

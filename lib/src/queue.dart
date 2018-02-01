@@ -126,6 +126,7 @@ abstract class QueueListener {
   /// immediately be added to the back of the queue for processing.
   void addQueuableItem(QueueItem queueableItem){
     this.queueableItems.add(queueableItem);
+    this.setupBeforeAdd(queueableItem);
     if(this._isRunning){
       queueableItem.stopwatch.start();
       this._queue.add(queueableItem);
@@ -261,6 +262,12 @@ abstract class QueueListener {
   /// This function is optionally meant for subclasses to set anything up
   /// before the system starts.
   void setupBeforeStart(){}
+
+  /// Get's called before the system adds another queueable item to the list;
+  ///
+  /// This function is optionally meant for subclasses to set anything up
+  /// before the system adds a new item.
+  void setupBeforeAdd(QueueItem itemBeingAdded) {}
 }
 
 /// An item intended to be processed by instances of [QueueListener].

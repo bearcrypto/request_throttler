@@ -1,12 +1,36 @@
 import 'dart:async';
 import 'dart:html';
+import 'package:request_throttler/request_items.dart';
 import 'package:request_throttler/src/queue.dart';
-import 'package:request_throttler/src/throttlers/vm/socket.dart' as Vm;
 
 /// Throttler used for controlling connections made to a [WebSocket] server.
 ///
 class WebSocketConnectionThrottler extends QueueListener{
   WebSocketConnectionThrottler(List<SocketRequestItem> queueableItems) : super(queueableItems);
+
+  void sendDataOverSocket(String data, SocketRequestItem requestItem){
+    if(requestItem is SocketRequestItem && requestItem.socket != null && requestItem.socket is WebSocket){
+      try {
+        requestItem.socket.send(data);
+      } catch (e) {}
+    }
+  }
+
+  @override
+  void setupBeforeStart(){
+    this.queueableItems.forEach((queueableItem){
+      if(queueableItem is SocketRequestItem){
+        queueableItem.sendDataOverSocketCallback = this.sendDataOverSocket;
+      }
+    });
+  }
+
+  @override
+  void setupBeforeAdd(QueueItem itemBeingAdded) {
+    if(itemBeingAdded is SocketRequestItem){
+      itemBeingAdded.sendDataOverSocketCallback = this.sendDataOverSocket;
+    }
+  }
 
   @override
   void tearDownBeforeStop(){
@@ -27,9 +51,10 @@ class WebSocketConnectionThrottler extends QueueListener{
   @override
   processQueueItem(QueueItem queueItemToProcess) {
     if(queueItemToProcess is SocketRequestItem) {
-      Vm.SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();
+      SocketEndPoint socketEndPoint = queueItemToProcess.getSocketEndPoint();
       WebSocket webSocket = new WebSocket(socketEndPoint.url);
         webSocket.onOpen.listen((connection) {
+          queueItemToProcess.socket = webSocket;
           webSocket.send(socketEndPoint.handshakeData);
           webSocket.onMessage.listen((data) {
             queueItemToProcess.parseReceivedData(data.data);
@@ -57,11 +82,4 @@ class WebSocketConnectionThrottler extends QueueListener{
         });
       }
   }
-}
-
-/// A Request item intended to be used for integrating with [WebSocketConnectionThrottler]s.
-///
-abstract class SocketRequestItem extends Vm.SocketRequestItem {
-  WebSocket socket;
-  SocketRequestItem(Duration timeBetweenRequests, bool recurring, bool runOnRestart) : super(timeBetweenRequests, recurring, runOnRestart);
 }
