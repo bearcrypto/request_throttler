@@ -9,6 +9,8 @@ import 'package:request_throttler/src/throttlers/browser/sockets/web_socket.dart
 class SocketIoConnectionThrottler extends WebSocketConnectionThrottler {
   SocketIoConnectionThrottler(List<SocketIoRequestItem> queueableItems) : super(queueableItems);
 
+  SocketIoConnectionThrottler.empty() : super([]);
+
   @override
   processQueueItem(QueueItem queueItemToProcess) {
     if(queueItemToProcess is SocketIoRequestItem) {

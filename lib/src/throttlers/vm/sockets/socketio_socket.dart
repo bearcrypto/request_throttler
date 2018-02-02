@@ -10,6 +10,8 @@ class SocketIoConnectionThrottler extends WebSocketConnectionThrottler{
 
   SocketIoConnectionThrottler(List<SocketIoRequestItem> queueableItems) : super(queueableItems);
 
+  SocketIoConnectionThrottler.empty() : super([]);
+
   @override
   processQueueItem(QueueItem queueItemToProcess) async {
     if(queueItemToProcess is SocketIoRequestItem){

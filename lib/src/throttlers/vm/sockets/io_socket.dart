@@ -8,6 +8,8 @@ import 'package:request_throttler/src/queue.dart';
 class IoSocketConnectionThrottler extends QueueListener{
   IoSocketConnectionThrottler(List<IoSocketRequestItem> queueableItems) : super(queueableItems);
 
+  IoSocketConnectionThrottler.empty() : super([]);
+
   void sendDataOverSocket(String data, SocketRequestItem requestItem){
     if(requestItem is IoSocketRequestItem && requestItem.socket != null && requestItem.socket is Socket){
       try {

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d248887d-5f91-4eba-afe3-2db0b5f8b6e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/main.dart" afterPath="$PROJECT_DIR$/bin/main.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/src/throttlers/browser/http.dart" afterPath="$PROJECT_DIR$/lib/src/throttlers/browser/http.dart" />
       <change beforePath="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart" afterPath="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart" />
       <change beforePath="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart" afterPath="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart" />
       <change beforePath="$PROJECT_DIR$/lib/src/throttlers/vm/http.dart" afterPath="$PROJECT_DIR$/lib/src/throttlers/vm/http.dart" />
@@ -23,12 +23,12 @@
       <file leaf-file-name="socketio_socket.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/socketio_socket.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="276">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="50" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <element signature="e#2420#2499#0" expanded="false" />
-                <element signature="e#2639#3299#0" expanded="false" />
+                <element signature="e#2472#2551#0" expanded="false" />
+                <element signature="e#2691#3351#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -37,31 +37,31 @@
       <file leaf-file-name="http.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/http.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="266">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="43" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#169#241#0" expanded="false" />
-                <element signature="e#1810#2227#0" expanded="false" />
-                <element signature="e#2529#2904#0" expanded="false" />
+                <element signature="e#1855#2272#0" expanded="false" />
+                <element signature="e#2574#2949#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web_socket.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web_socket.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/web_socket.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="72" column="31" lean-forward="true" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+            <state relative-caret-position="253">
+              <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#146#222#0" expanded="false" />
-                <element signature="e#451#640#0" expanded="false" />
-                <element signature="e#679#871#0" expanded="false" />
-                <element signature="e#933#1064#0" expanded="false" />
-                <element signature="e#1105#1289#0" expanded="false" />
-                <element signature="e#1358#1494#0" expanded="false" />
+                <element signature="e#504#693#0" expanded="false" />
+                <element signature="e#732#924#0" expanded="false" />
+                <element signature="e#986#1117#0" expanded="false" />
+                <element signature="e#1158#1342#0" expanded="false" />
+                <element signature="e#1411#1547#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -70,16 +70,16 @@
       <file leaf-file-name="io_socket.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/io_socket.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="76" selection-end-column="28" />
+            <state relative-caret-position="207">
+              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="50" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#146#216#0" expanded="false" />
-                <element signature="e#674#868#0" expanded="false" />
-                <element signature="e#930#1063#0" expanded="false" />
-                <element signature="e#1104#1210#0" expanded="false" />
-                <element signature="e#1279#1327#0" expanded="false" />
-                <element signature="e#1376#1543#0" expanded="false" />
+                <element signature="e#726#920#0" expanded="false" />
+                <element signature="e#982#1115#0" expanded="false" />
+                <element signature="e#1156#1262#0" expanded="false" />
+                <element signature="e#1331#1379#0" expanded="false" />
+                <element signature="e#1428#1595#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -88,13 +88,14 @@
       <file leaf-file-name="socketio_socket.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="230">
+              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="50" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#231#310#0" expanded="false" />
-                <element signature="e#1994#2073#0" expanded="false" />
-                <element signature="e#2213#2822#0" expanded="false" />
+                <element signature="e#599#2042#0" expanded="false" />
+                <element signature="e#2046#2125#0" expanded="false" />
+                <element signature="e#2265#2874#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -103,12 +104,12 @@
       <file leaf-file-name="web_socket.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="61" selection-end-column="23" />
+            <state relative-caret-position="207">
+              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#148#224#0" expanded="false" />
-                <element signature="e#1361#1497#0" expanded="false" />
+                <element signature="e#1414#1550#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -117,12 +118,12 @@
       <file leaf-file-name="http.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/http.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+            <state relative-caret-position="230">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="43" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#231#303#0" expanded="false" />
-                <element signature="e#721#1142#0" expanded="false" />
+                <element signature="e#767#1188#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -167,10 +168,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="495">
               <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -213,21 +214,21 @@
         <option value="$PROJECT_DIR$/lib/src/request_items/http.dart" />
         <option value="$PROJECT_DIR$/lib/src/request_items.dart" />
         <option value="$PROJECT_DIR$/lib/request_items.dart" />
-        <option value="$PROJECT_DIR$/lib/src/throttlers/browser/http.dart" />
         <option value="$PROJECT_DIR$/lib/src/queue.dart" />
         <option value="$PROJECT_DIR$/lib/src/request_items/socket.dart" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/bin/main.dart" />
+        <option value="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart" />
+        <option value="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart" />
+        <option value="$PROJECT_DIR$/lib/src/throttlers/browser/http.dart" />
+        <option value="$PROJECT_DIR$/lib/src/throttlers/vm/http.dart" />
         <option value="$PROJECT_DIR$/lib/src/throttlers/vm/sockets/io_socket.dart" />
         <option value="$PROJECT_DIR$/lib/src/throttlers/vm/sockets/socketio_socket.dart" />
         <option value="$PROJECT_DIR$/lib/src/throttlers/vm/sockets/web_socket.dart" />
-        <option value="$PROJECT_DIR$/lib/src/throttlers/vm/http.dart" />
-        <option value="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart" />
-        <option value="$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart" />
-        <option value="$PROJECT_DIR$/bin/main.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="878" />
@@ -247,8 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,23 +285,6 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="throttlers" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="request_throttler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="request_throttler" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="throttlers" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="sockets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="request_throttler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="request_throttler" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="throttlers" type="462c0819:PsiDirectoryNode" />
               <item name="vm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -317,8 +300,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -463,12 +447,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29383314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29383314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27825466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28183118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -500,7 +484,7 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#148#224#0" expanded="false" />
-            <element signature="e#1361#1497#0" expanded="false" />
+            <element signature="e#1414#1550#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -512,7 +496,7 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#231#303#0" expanded="false" />
-            <element signature="e#721#1142#0" expanded="false" />
+            <element signature="e#767#1188#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -557,8 +541,8 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#169#241#0" expanded="false" />
-            <element signature="e#1810#2227#0" expanded="false" />
-            <element signature="e#2529#2904#0" expanded="false" />
+            <element signature="e#1855#2272#0" expanded="false" />
+            <element signature="e#2574#2949#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -570,11 +554,11 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#146#216#0" expanded="false" />
-            <element signature="e#674#868#0" expanded="false" />
-            <element signature="e#930#1063#0" expanded="false" />
-            <element signature="e#1104#1210#0" expanded="false" />
-            <element signature="e#1279#1327#0" expanded="false" />
-            <element signature="e#1376#1543#0" expanded="false" />
+            <element signature="e#726#920#0" expanded="false" />
+            <element signature="e#982#1115#0" expanded="false" />
+            <element signature="e#1156#1262#0" expanded="false" />
+            <element signature="e#1331#1379#0" expanded="false" />
+            <element signature="e#1428#1595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -585,8 +569,8 @@
           <caret line="120" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2420#2499#0" expanded="false" />
-            <element signature="e#2639#3299#0" expanded="false" />
+            <element signature="e#2472#2551#0" expanded="false" />
+            <element signature="e#2691#3351#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -598,11 +582,11 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#146#222#0" expanded="false" />
-            <element signature="e#451#640#0" expanded="false" />
-            <element signature="e#679#871#0" expanded="false" />
-            <element signature="e#933#1064#0" expanded="false" />
-            <element signature="e#1105#1289#0" expanded="false" />
-            <element signature="e#1358#1494#0" expanded="false" />
+            <element signature="e#504#693#0" expanded="false" />
+            <element signature="e#732#924#0" expanded="false" />
+            <element signature="e#986#1117#0" expanded="false" />
+            <element signature="e#1158#1342#0" expanded="false" />
+            <element signature="e#1411#1547#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -614,7 +598,7 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#148#224#0" expanded="false" />
-            <element signature="e#1361#1497#0" expanded="false" />
+            <element signature="e#1414#1550#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -626,8 +610,9 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#231#310#0" expanded="false" />
-            <element signature="e#1994#2073#0" expanded="false" />
-            <element signature="e#2213#2822#0" expanded="false" />
+            <element signature="e#599#2042#0" expanded="false" />
+            <element signature="e#2046#2125#0" expanded="false" />
+            <element signature="e#2265#2874#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -672,8 +657,8 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#169#241#0" expanded="false" />
-            <element signature="e#1810#2227#0" expanded="false" />
-            <element signature="e#2529#2904#0" expanded="false" />
+            <element signature="e#1855#2272#0" expanded="false" />
+            <element signature="e#2574#2949#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -684,8 +669,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2420#2499#0" expanded="false" />
-            <element signature="e#2639#3299#0" expanded="false" />
+            <element signature="e#2472#2551#0" expanded="false" />
+            <element signature="e#2691#3351#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -697,11 +682,11 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#146#222#0" expanded="false" />
-            <element signature="e#451#640#0" expanded="false" />
-            <element signature="e#679#871#0" expanded="false" />
-            <element signature="e#933#1064#0" expanded="false" />
-            <element signature="e#1105#1289#0" expanded="false" />
-            <element signature="e#1358#1494#0" expanded="false" />
+            <element signature="e#504#693#0" expanded="false" />
+            <element signature="e#732#924#0" expanded="false" />
+            <element signature="e#986#1117#0" expanded="false" />
+            <element signature="e#1158#1342#0" expanded="false" />
+            <element signature="e#1411#1547#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -713,8 +698,9 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#231#310#0" expanded="false" />
-            <element signature="e#1994#2073#0" expanded="false" />
-            <element signature="e#2213#2822#0" expanded="false" />
+            <element signature="e#599#2042#0" expanded="false" />
+            <element signature="e#2046#2125#0" expanded="false" />
+            <element signature="e#2265#2874#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -726,7 +712,7 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#148#224#0" expanded="false" />
-            <element signature="e#1361#1497#0" expanded="false" />
+            <element signature="e#1414#1550#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -738,11 +724,11 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#146#216#0" expanded="false" />
-            <element signature="e#674#868#0" expanded="false" />
-            <element signature="e#930#1063#0" expanded="false" />
-            <element signature="e#1104#1210#0" expanded="false" />
-            <element signature="e#1279#1327#0" expanded="false" />
-            <element signature="e#1376#1543#0" expanded="false" />
+            <element signature="e#726#920#0" expanded="false" />
+            <element signature="e#982#1115#0" expanded="false" />
+            <element signature="e#1156#1262#0" expanded="false" />
+            <element signature="e#1331#1379#0" expanded="false" />
+            <element signature="e#1428#1595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -786,8 +772,8 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#169#241#0" expanded="false" />
-            <element signature="e#1810#2227#0" expanded="false" />
-            <element signature="e#2529#2904#0" expanded="false" />
+            <element signature="e#1855#2272#0" expanded="false" />
+            <element signature="e#2574#2949#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,11 +785,11 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#146#216#0" expanded="false" />
-            <element signature="e#674#868#0" expanded="false" />
-            <element signature="e#930#1063#0" expanded="false" />
-            <element signature="e#1104#1210#0" expanded="false" />
-            <element signature="e#1279#1327#0" expanded="false" />
-            <element signature="e#1376#1543#0" expanded="false" />
+            <element signature="e#726#920#0" expanded="false" />
+            <element signature="e#982#1115#0" expanded="false" />
+            <element signature="e#1156#1262#0" expanded="false" />
+            <element signature="e#1331#1379#0" expanded="false" />
+            <element signature="e#1428#1595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -814,8 +800,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2420#2499#0" expanded="false" />
-            <element signature="e#2639#3299#0" expanded="false" />
+            <element signature="e#2472#2551#0" expanded="false" />
+            <element signature="e#2691#3351#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -827,11 +813,11 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#146#222#0" expanded="false" />
-            <element signature="e#451#640#0" expanded="false" />
-            <element signature="e#679#871#0" expanded="false" />
-            <element signature="e#933#1064#0" expanded="false" />
-            <element signature="e#1105#1289#0" expanded="false" />
-            <element signature="e#1358#1494#0" expanded="false" />
+            <element signature="e#504#693#0" expanded="false" />
+            <element signature="e#732#924#0" expanded="false" />
+            <element signature="e#986#1117#0" expanded="false" />
+            <element signature="e#1158#1342#0" expanded="false" />
+            <element signature="e#1411#1547#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -843,8 +829,9 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#231#310#0" expanded="false" />
-            <element signature="e#1994#2073#0" expanded="false" />
-            <element signature="e#2213#2822#0" expanded="false" />
+            <element signature="e#599#2042#0" expanded="false" />
+            <element signature="e#2046#2125#0" expanded="false" />
+            <element signature="e#2265#2874#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -856,7 +843,7 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#148#224#0" expanded="false" />
-            <element signature="e#1361#1497#0" expanded="false" />
+            <element signature="e#1414#1550#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -900,8 +887,8 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#169#241#0" expanded="false" />
-            <element signature="e#1810#2227#0" expanded="false" />
-            <element signature="e#2529#2904#0" expanded="false" />
+            <element signature="e#1855#2272#0" expanded="false" />
+            <element signature="e#2574#2949#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -913,11 +900,11 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#146#216#0" expanded="false" />
-            <element signature="e#674#868#0" expanded="false" />
-            <element signature="e#930#1063#0" expanded="false" />
-            <element signature="e#1104#1210#0" expanded="false" />
-            <element signature="e#1279#1327#0" expanded="false" />
-            <element signature="e#1376#1543#0" expanded="false" />
+            <element signature="e#726#920#0" expanded="false" />
+            <element signature="e#982#1115#0" expanded="false" />
+            <element signature="e#1156#1262#0" expanded="false" />
+            <element signature="e#1331#1379#0" expanded="false" />
+            <element signature="e#1428#1595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -928,8 +915,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2420#2499#0" expanded="false" />
-            <element signature="e#2639#3299#0" expanded="false" />
+            <element signature="e#2472#2551#0" expanded="false" />
+            <element signature="e#2691#3351#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -941,11 +928,11 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#146#222#0" expanded="false" />
-            <element signature="e#451#640#0" expanded="false" />
-            <element signature="e#679#871#0" expanded="false" />
-            <element signature="e#933#1064#0" expanded="false" />
-            <element signature="e#1105#1289#0" expanded="false" />
-            <element signature="e#1358#1494#0" expanded="false" />
+            <element signature="e#504#693#0" expanded="false" />
+            <element signature="e#732#924#0" expanded="false" />
+            <element signature="e#986#1117#0" expanded="false" />
+            <element signature="e#1158#1342#0" expanded="false" />
+            <element signature="e#1411#1547#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -957,8 +944,9 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#231#310#0" expanded="false" />
-            <element signature="e#1994#2073#0" expanded="false" />
-            <element signature="e#2213#2822#0" expanded="false" />
+            <element signature="e#599#2042#0" expanded="false" />
+            <element signature="e#2046#2125#0" expanded="false" />
+            <element signature="e#2265#2874#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -970,7 +958,7 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#148#224#0" expanded="false" />
-            <element signature="e#1361#1497#0" expanded="false" />
+            <element signature="e#1414#1550#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1131,106 +1119,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/socketio_socket.dart">
+    <entry file="file://$PROJECT_DIR$/bin/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        <state relative-caret-position="495">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#2420#2499#0" expanded="false" />
-            <element signature="e#2639#3299#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/io_socket.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="76" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#146#216#0" expanded="false" />
-            <element signature="e#674#868#0" expanded="false" />
-            <element signature="e#930#1063#0" expanded="false" />
-            <element signature="e#1104#1210#0" expanded="false" />
-            <element signature="e#1279#1327#0" expanded="false" />
-            <element signature="e#1376#1543#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/web_socket.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="72" column="31" lean-forward="true" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#146#222#0" expanded="false" />
-            <element signature="e#451#640#0" expanded="false" />
-            <element signature="e#679#871#0" expanded="false" />
-            <element signature="e#933#1064#0" expanded="false" />
-            <element signature="e#1105#1289#0" expanded="false" />
-            <element signature="e#1358#1494#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/http.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#169#241#0" expanded="false" />
-            <element signature="e#1810#2227#0" expanded="false" />
-            <element signature="e#2529#2904#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/http.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#231#303#0" expanded="false" />
-            <element signature="e#721#1142#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/sockets/web_socket.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="61" selection-end-column="23" />
+        <state relative-caret-position="207">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#148#224#0" expanded="false" />
-            <element signature="e#1361#1497#0" expanded="false" />
+            <element signature="e#1414#1550#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/sockets/socketio_socket.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="230">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="50" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <element signature="e#231#310#0" expanded="false" />
-            <element signature="e#1994#2073#0" expanded="false" />
-            <element signature="e#2213#2822#0" expanded="false" />
+            <element signature="e#599#2042#0" expanded="false" />
+            <element signature="e#2046#2125#0" expanded="false" />
+            <element signature="e#2265#2874#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/main.dart">
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/browser/http.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        <state relative-caret-position="230">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="43" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#231#303#0" expanded="false" />
+            <element signature="e#767#1188#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/http.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#169#241#0" expanded="false" />
+            <element signature="e#1855#2272#0" expanded="false" />
+            <element signature="e#2574#2949#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/io_socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#146#216#0" expanded="false" />
+            <element signature="e#726#920#0" expanded="false" />
+            <element signature="e#982#1115#0" expanded="false" />
+            <element signature="e#1156#1262#0" expanded="false" />
+            <element signature="e#1331#1379#0" expanded="false" />
+            <element signature="e#1428#1595#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/socketio_socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#2472#2551#0" expanded="false" />
+            <element signature="e#2691#3351#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/throttlers/vm/sockets/web_socket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#146#222#0" expanded="false" />
+            <element signature="e#504#693#0" expanded="false" />
+            <element signature="e#732#924#0" expanded="false" />
+            <element signature="e#986#1117#0" expanded="false" />
+            <element signature="e#1158#1342#0" expanded="false" />
+            <element signature="e#1411#1547#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -13,6 +13,9 @@ import 'package:request_throttler/src/throttlers/vm/http.dart' as Vm;
 class HttpRequestThrottler extends Vm.HttpRequestThrottler {
   HttpRequestThrottler(List<HttpRequestItem> queueableItems) : super(queueableItems);
 
+  HttpRequestThrottler.empty() : super([]);
+
+
   @override
   Future<Http.Response> makeHttpRequest(String url) async {
     BrowserClient httpClient = new BrowserClient();

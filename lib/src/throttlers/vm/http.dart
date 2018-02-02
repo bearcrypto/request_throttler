@@ -23,6 +23,8 @@ class HttpRequestThrottler extends QueueListener{
 
   HttpRequestThrottler(List<HttpRequestItem> queueableItems) : super(queueableItems);
 
+  HttpRequestThrottler.empty() : super([]);
+
   @override
   processQueueItem(QueueItem queueItemToProcess) async {
     if(queueItemToProcess is HttpRequestItem){

@@ -8,6 +8,8 @@ import 'package:request_throttler/src/queue.dart';
 class WebSocketConnectionThrottler extends QueueListener{
   WebSocketConnectionThrottler(List<SocketRequestItem> queueableItems) : super(queueableItems);
 
+  WebSocketConnectionThrottler.empty() : super([]);
+
   void sendDataOverSocket(String data, SocketRequestItem requestItem){
     if(requestItem is SocketRequestItem && requestItem.socket != null && requestItem.socket is WebSocket){
       try {
