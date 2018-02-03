@@ -109,7 +109,7 @@ abstract class SocketIoRequestItem extends SocketRequestItem {
   ///
   /// This method will attempt to format information appropriately so that it can
   /// be understood by the remote SocketIo server.
-  static String formatAsEmit(String event, Map data){
+  static String formatAsEmit(String event, dynamic data){
     return '42["${event}",${data.toString()}]';
   }
 }
